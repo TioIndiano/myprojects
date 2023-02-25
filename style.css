@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-size: 100%;
+  background: linear-gradient(68.15deg, #121616 16.62%, #1b6660 85.61%);
+  background-image: url(./assets/bg-desktop.jpg);
+  background-attachment:fixed;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 36px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+/* .logo {
+  height: 72px;
+} */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  display: flex;
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  align-items: center;
+  transition: 0.5 ease;
+}
+
+.nav-link:hover {
+  transition: 0.3s;
+  transform: scale(1.10);
+}
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3 ease-in-out;
+}
+/*
+main > .content {
+  max-width: 121.6rem;
+  margin: 10rem auto;
+}
+
+section.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.top .view {
+  display: flex;
+  padding: 0.8rem;
+
+  border: 0.1rem solid #eaeaea;
+  border-radius: 0.6rem;
+}
+*/
+
+section.cards {
+  margin-top: 4rem;
+
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  background: #ffffff;
+  border: 0.1rem solid #eaeaea;
+  border-radius: 1rem;
+  max-width: 38.4rem;
+  overflow: hidden;
+  font-family: "Sarala", sans-serif;
+}
+
+.card :hover {
+  transition: 0.3s;
+  transform: scale(1.02);
+}
+
+.card .content {
+  display: grid;
+  gap: 1.6rem;
+
+  padding: 1.6rem;
+}
+
+.card h3 {
+  color: #121214;
+  font-size: 1.6rem;
+  line-height: 140%;
+}
+
+.card p {
+  opacity: 0.75;
+  font-size: 1rem;
+}
+
+.card .card-link {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 1.25rem;
+
+  opacity: 0.75;
+}
+
+.card-link i {
+  color: #202020;
+  font-size: 1.3rem;
+  opacity: 1;
+}
+
+.card-link a {
+  color: #202020;
+  font-size: 1.1rem;
+  opacity: 1;
+}
+
+
+footer {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Sarala", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* responsivo - milha extra */
+
+@media (max-width: 768px) {
+  .hamburguer {
+    display: block;
+  }
+  .hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    border-radius: 0 0 20px 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin-top: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .container {
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: column;
+    font-size: smaller;
+  }
+  .container-image {
+    display: none;
+  }
+}
+
+main {
+  padding-inline: 4rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+
+  header::before {
+    background-size: 30vw;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 870px) {
+  header .content {
+    padding: 4rem;
+  }
+
+  header form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 660px) {
+  section.cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  section.cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
