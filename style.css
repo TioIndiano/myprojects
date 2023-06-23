@@ -90,10 +90,12 @@ section.top .view {
 
 section.cards {
   margin-top: 4rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 
   display: grid;
   gap: 3.2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card {
